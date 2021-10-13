@@ -2,6 +2,8 @@
 
 Illustrates setting up react components in an MVVM pattern using MOBX for the reactive viewmodel.
 
+Styling borrowed from [ToDoMVC](https://todomvc.com/examples/react/)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
