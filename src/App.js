@@ -1,16 +1,10 @@
-import TodoFooter from './Todo/TodoFooter';
-import TodoInput from './Todo/TodoInput';
-import TodoItems from './Todo/TodoItems';
-import TodoListViewModel from './Todo/TodoListViewModel';
+
+import TodoList from './Todo';
 
 function App() {
-  const todoModel = new TodoListViewModel();
-
   return (
     <div className="App">
-      <TodoInput model={todoModel}></TodoInput>
-      <TodoItems model={todoModel}></TodoItems>
-      <TodoFooter model={todoModel}></TodoFooter>
+      <TodoList></TodoList>
     </div>
   );
 }
