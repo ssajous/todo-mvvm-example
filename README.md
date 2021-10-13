@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# React MVVM Example Using MOBX
+
+Illustrates setting up react components in an MVVM pattern using MOBX for the reactive viewmodel.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
