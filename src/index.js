@@ -7,7 +7,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <section class="todoapp">
+    <section className="todoapp">
       <App />
     </section>
   </React.StrictMode>,

@@ -1,17 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import TodoFooter from './Todo/TodoFooter';
+import TodoInput from './Todo/TodoInput';
+import TodoItems from './Todo/TodoItems';
+import TodoListViewModel from './Todo/TodoListViewModel';
 
 function App() {
+  const todoModel = new TodoListViewModel();
+
   return (
     <div className="App">
-      <header className="header">
-        <h1>todos</h1>
-        <input 
-          className="new-todo"
-          placeholder="What needs to be done?"
-        />
-
-      </header>
+      <TodoInput model={todoModel}></TodoInput>
+      <TodoItems model={todoModel}></TodoItems>
+      <TodoFooter model={todoModel}></TodoFooter>
     </div>
   );
 }
