@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react';
 
 const TodoItem = observer((props) => {
-  const { model } = props;
+  const { model, deleteTodo } = props;
 
   const handleToggle = (event) => {
     model.setStatus(event.target.checked);
@@ -15,9 +15,8 @@ const TodoItem = observer((props) => {
           checked={model.complete}
           onChange={handleToggle}></input>
         <label>{model.value}</label>
-        <button className="destroy"></button>
+        <button className="destroy" onClick={() => deleteTodo(model)}></button>
       </div>
-      {/* <input className="edit" value={item.value}></input> */}
     </>
   )
 })

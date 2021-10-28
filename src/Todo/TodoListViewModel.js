@@ -1,4 +1,4 @@
-import { makeAutoObservable, action, makeObservable, observable, computed } from "mobx";
+import { makeAutoObservable, action } from "mobx";
 import { v4 as uuidv4 } from 'uuid'
 
 export class TodoItem {
@@ -40,9 +40,7 @@ export default class TodoListViewModel {
       clearCompleted: action.bound,
       updateCurrentTodo: action.bound,
       setFilterType: action.bound,
-      clearCompleted: action.bound,
-      updateCurrentTodo: action.bound,
-      setFilterType: action.bound
+      deleteTodo: action.bound
     });
   }
 
@@ -57,6 +55,11 @@ export default class TodoListViewModel {
 
   get completedTodos() {
     return this.todos.filter(item => item.complete);
+  }
+
+  deleteTodo(todo) {
+    const updatedList = this.todos.filter(item => item !== todo);
+    this.todos.replace(updatedList);
   }
 
   get currentTodos() {
