@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.1.10",
     "mobx": "^6.3.3",
     "mobx-react": "^7.2.0",
+    "playwright": "^1.27.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -37,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.27.1"
   }
 }
