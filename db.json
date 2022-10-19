@@ -1,0 +1,8 @@
+{
+  "todos": [
+    { "id": 1, "name": "learn playwright"},
+    { "id": 2, "name": "write a bunch of fast end-to-end tests"},
+    { "id": 3, "name": "feel confident about code quality"},
+    { "id": 4, "name": "profit"}
+  ]
+}
