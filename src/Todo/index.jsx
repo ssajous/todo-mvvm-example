@@ -9,6 +9,7 @@ const TodoList = (props) => {
   return (
     <>
       <TodoInput model={todoModel}></TodoInput>
+      <button id="download" className="download-button" onClick={todoModel.downloadTodos}>Download Example</button>
       <TodoItems model={todoModel}></TodoItems>
       <TodoFooter model={todoModel}></TodoFooter>
     </>

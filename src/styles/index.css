@@ -350,6 +350,13 @@ html .clear-completed:active {
 	text-decoration: underline;
 }
 
+.download-button {
+  padding: 8px;
+  border: 1px solid darkgray;
+  margin: 4px;
+  background-color: lightgray;
+}
+
 /*
 	Hack to remove background from Mobile Safari.
 	Can't use it globally since it destroys checkboxes in Firefox

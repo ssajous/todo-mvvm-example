@@ -1,5 +1,6 @@
 import { makeAutoObservable, action } from "mobx";
 import { v4 as uuidv4 } from 'uuid'
+import axios from "axios";
 
 export class TodoItem {
   id = "";
@@ -40,7 +41,8 @@ export default class TodoListViewModel {
       clearCompleted: action.bound,
       updateCurrentTodo: action.bound,
       setFilterType: action.bound,
-      deleteTodo: action.bound
+      deleteTodo: action.bound,
+      downloadTodos: action.bound
     });
   }
 
@@ -88,5 +90,17 @@ export default class TodoListViewModel {
 
   setFilterType(todoType) {
     this.filter = todoType;
+  }
+
+  downloadTodos() {
+    console.log("Downloading todo items");
+    axios.get("http://localhost:3001/todos").then(({data}) => this.addDownloadedTodos(data));
+  }
+
+  addDownloadedTodos(data) {
+    console.log('adding downloaded todos to list');
+    data.forEach(todo => {
+      this.todos.push(new TodoItem(todo.name));
+    });
   }
 }
